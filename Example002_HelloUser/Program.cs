@@ -1,16 +1,23 @@
 ﻿Console.Clear();
 Console.Write("Введите ваше имя: ");
-string inputUserName = Console.ReadLine();
 
-if (myEquals(inputUserName, "Маша"))
+var inputUserName = Console.ReadLine();
+
+if (inputUserName != null)
 {
-    Console.WriteLine("Это же МАША!");
+    if (myEquals(inputUserName.ToString(), "Маша"))
+    {
+        Console.WriteLine("Это же МАША!");
+    }
+    else
+    {
+        Console.WriteLine("Привет, " + inputUserName);
+    }
 }
 else
 {
-    Console.WriteLine("Привет, " + inputUserName);
+    System.Console.WriteLine("Input is null!");
 }
-
 
 bool myEquals(string obj1, string obj2)
 {
